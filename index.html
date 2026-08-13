@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India Finance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="toast" class="toast"></div>
+
+<!-- ================= LOGIN ================= -->
+
+<section id="loginPage" class="auth-page">
+
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <div class="auth-card">
+
+    <div class="brand">
+      <div class="brand-mark">⌂</div>
+      <b>INDIA FINANCE</b>
+    </div>
+
+    <h1>Welcome Back!</h1>
+    <p>Please sign in to your account to continue.</p>
+
+    <label>User ID</label>
+
+    <div class="input-wrap">
+      <span>♙</span>
+      <input id="loginUser" type="text" placeholder="User ID">
+    </div>
+
+    <label>Password</label>
+
+    <div class="input-wrap">
+      <span>♙</span>
+      <input id="loginPass" type="password" placeholder="Password">
+      <button class="eye" data-toggle="loginPass">◉</button>
+    </div>
+
+    <div class="row remember">
+
+      <label>
+        <input type="checkbox">
+        Remember me
+      </label>
+
+      <button class="link" id="forgotBtn">
+        Forgot Password?
+      </button>
+
+    </div>
+
+    <button class="primary" id="signInBtn">
+      Sign In
+    </button>
+
+    <div class="switch">
+      Don't have an account?
+      <button class="link" id="createBtn">
+        Create an Account
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SIGN UP ================= -->
+
+<section id="signupPage" class="auth-page hidden">
+
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <div class="auth-card signup-card">
+
+    <div class="brand">
+      <div class="brand-mark">⌂</div>
+      <b>INDIA FINANCE</b>
+    </div>
+
+    <h1>Create an Account</h1>
+    <p>Join us and experience India Finance.</p>
+
+    <label>Referral ID</label>
+
+    <div class="input-wrap">
+      <span>#</span>
+      <input id="referralId" placeholder="Referral ID">
+    </div>
+
+    <label>Full Name</label>
+
+    <div class="input-wrap">
+      <span>♙</span>
+      <input id="signupName" placeholder="Full Name">
+    </div>
+
+    <label>Email Address</label>
+
+    <div class="input-wrap">
+      <span>✉</span>
+      <input id="signupEmail" type="email" placeholder="Email Address">
+    </div>
+
+    <label>Country</label>
+
+    <div class="input-wrap">
+      <span>◉</span>
+
+      <select id="signupCountry">
+        <option value="">--Select Country--</option>
+        <option value="India">India</option>
+        <option value="United States">United States</option>
+        <option value="United Kingdom">United Kingdom</option>
+      </select>
+
+    </div>
+
+    <label>Mobile (+ISD...)</label>
+
+    <div class="input-wrap">
+      <span>☎</span>
+      <input id="signupMobile" placeholder="Mobile Number">
+    </div>
+
+    <label>User ID</label>
+
+    <div class="input-wrap">
+      <span>#</span>
+      <input id="signupUserId" placeholder="Choose User ID">
+    </div>
+
+    <label>Password</label>
+
+    <div class="input-wrap">
+      <span>♙</span>
+
+      <input
+        id="signupPass"
+        type="password"
+        placeholder="Password"
+      >
+
+      <button class="eye" data-toggle="signupPass">
+        ◉
+      </button>
+
+    </div>
+
+    <div class="terms">
+
+      <input type="checkbox" id="terms">
+
+      <span>
+        I agree to the
+        <button class="link">
+          Terms and Conditions
+        </button>
+      </span>
+
+    </div>
+
+    <button class="primary" id="createAccountBtn">
+      Create Account
+    </button>
+
+    <div class="switch">
+      Already have an account?
+      <button class="link" id="backLoginBtn">
+        Sign In
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section id="dashboardPage" class="dashboard hidden">
+
+  <!-- TOP BAR -->
+
+  <header class="topbar">
+
+    <button class="icon-btn" id="menuBtn">
+      ☰
+    </button>
+
+    <button class="icon-btn" id="themeBtn">
+      ◐
+    </button>
+
+    <div class="top-spacer"></div>
+
+    <button class="avatar-btn" id="profileBtn">
+
+      <span class="avatar-mini">
+        ⌂
+      </span>
+
+      <span class="online"></span>
+
+    </button>
+
+  </header>
+
+
+  <!-- SIDEBAR -->
+
+  <aside id="sidebar" class="sidebar">
+
+    <div class="side-brand">
+
+      <div class="brand-mark">
+        ⌂
+      </div>
+
+      <b>INDIA FINANCE</b>
+
+      <button id="closeMenu">
+        ×
+      </button>
+
+    </div>
+
+
+    <nav>
+
+      <button class="nav-item active" data-page="Dashboard">
+        ◉
+        <span>Dashboard</span>
+      </button>
+
+
+      <button class="nav-item" data-page="Recharge">
+        ▣
+        <span>Recharge</span>
+      </button>
+
+
+      <!-- PACKAGE -->
+
+      <button
+        class="nav-item expandable"
+        data-target="packageSub"
+      >
+        🎁
+        <span>Package Activation</span>
+        <i>⌄</i>
+      </button>
+
+      <div id="packageSub" class="subnav">
+
+        <button data-demo="Basic Package">
+          Basic Package
+        </button>
+
+        <button data-demo="FD Package">
+          FD Package
+        </button>
+
+      </div>
+
+
+      <!-- DOWNLINE -->
+
+      <button
+        class="nav-item expandable"
+        data-target="downlineSub"
+      >
+        ♟
+        <span>Downline</span>
+        <i>⌄</i>
+      </button>
+
+      <div id="downlineSub" class="subnav">
+
+        <button data-demo="Direct Team">
+          Direct Team
+        </button>
+
+        <button data-demo="Total Team">
+          Total Team
+        </button>
+
+      </div>
+
+
+      <!-- INCOME -->
+
+      <button
+        class="nav-item expandable"
+        data-target="incomeSub"
+      >
+        ▣
+        <span>Income</span>
+        <i>⌄</i>
+      </button>
+
+      <div id="incomeSub" class="subnav">
+
+        <button data-demo="Basic ROI Income">
+          Basic ROI Income
+        </button>
+
+        <button data-demo="Basic Referral Income">
+          Basic Referral Income
+        </button>
+
+        <button data-demo="Basic Level Income">
+          Basic Level Income
+        </button>
+
+        <button data-demo="FD ROI Income">
+          FD ROI Income
+        </button>
+
+        <button data-demo="FD Referral Income">
+          FD Referral Income
+        </button>
+
+        <button data-demo="FD Level Income">
+          FD Level Income
+        </button>
+
+      </div>
+
+
+      <button class="nav-item" data-page="Transactional">
+        ◉
+        <span>Transactional</span>
+      </button>
+
+
+      <!-- REPORTS -->
+
+      <button
+        class="nav-item expandable"
+        data-target="reportSub"
+      >
+        ▣
+        <span>Reports</span>
+        <i>⌃</i>
+      </button>
+
+      <div id="reportSub" class="subnav open">
+
+        <button data-demo="Daily Income Report">
+          Daily Income Report
+        </button>
+
+        <button data-demo="Monthly Income Report">
+          Monthly Income Report
+        </button>
+
+        <button data-demo="Fund Wallet Summary">
+          Fund Wallet Summary
+        </button>
+
+        <button data-demo="Income Wallet Summary">
+          Income Wallet Summary
+        </button>
+
+      </div>
+
+
+      <button
+        class="nav-item"
+        data-demo="Support Ticket"
+      >
+        ♙
+        <span>Support Ticket</span>
+      </button>
+
+
+      <button class="nav-item logout" id="logoutBtn">
+        ⎋
+        <span>Logout</span>
+      </button>
+
+    </nav>
+
+  </aside>
+
+
+  <!-- MAIN -->
+
+  <main class="main">
+
+    <div class="page-title">
+      Dashboard
+    </div>
+
+
+    <!-- USER PROFILE -->
+
+    <section class="profile-card">
+
+      <div class="profile-logo">
+        ⌂
+      </div>
+
+      <h2 id="dashboardName">
+        User
+      </h2>
+
+      <div class="profile-meta">
+
+        <span>
+          User ID
+          <br>
+          <b id="dashboardUserId">—</b>
+        </span>
+
+        <span>
+          Status
+          <br>
+          <b class="green">Active</b>
+        </span>
+
+        <span>
+          Join Date
+          <br>
+          <b id="joinDate">—</b>
+        </span>
+
+      </div>
+
+
+      <div class="direct">
+        Direct Business :
+        <b>₹ 0.00</b>
+      </div>
+
+
+      <div class="ref-link">
+
+        🔗
+        <span id="referralLink">
+          —
+        </span>
+
+        <button id="copyReferral">
+          Copy
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- PACKAGE -->
+
+    <div class="package-row">
+
+      <div class="package">
+
+        <small>BASIC PACKAGE</small>
+
+        <strong id="basicPackage">
+          ₹ 0.00
+        </strong>
+
+      </div>
+
+
+      <div class="package">
+
+        <small>FD PACKAGE</small>
+
+        <strong id="fdPackage">
+          ₹ 0.00
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <!-- BALANCE -->
+
+    <section class="section">
+
+      <h3>
+        🎁 Balance Summary
+      </h3>
+
+      <div class="grid four">
+
+        <div class="stat green-bg">
+
+          <small>AVAILABLE FUND</small>
+
+          <strong id="availableFund">
+            ₹ 0.00
+          </strong>
+
+        </div>
+
+
+        <div class="stat blue-bg">
+
+          <small>AVAILABLE BALANCE</small>
+
+          <strong id="availableBalance">
+            ₹ 0.00
+          </strong>
+
+        </div>
+
+
+        <div class="stat green-bg">
+
+          <small>TOTAL INCOME</small>
+
+          <strong id="totalIncome">
+            ₹ 0.00
+          </strong>
+
+        </div>
+
+
+        <div class="stat red-bg">
+
+          <small>TOTAL WITHDRAWAL</small>
+
+          <strong id="totalWithdrawal">
+            ₹ 0.00
+          </strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TEAM -->
+
+    <section class="section">
+
+      <h3>
+        👥 Team Summary
+      </h3>
+
+      <div class="grid two">
+
+        <div class="stat">
+
+          <small>DIRECT TEAM</small>
+
+          <strong>
+            0
+          </strong>
+
+        </div>
+
+
+        <div class="stat">
+
+          <small>TOTAL TEAM</small>
+
+          <strong>
+            0
+          </strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- BASIC INCOME -->
+
+    <section class="section">
+
+      <h3>
+        🎁 Basic Income Breakdown
+      </h3>
+
+      <div class="grid six">
+
+        <div class="stat">
+          <small>JOINING BONUS</small>
+          <strong class="yellow">₹ 0.00</strong>
+        </div>
+
+        <div class="stat">
+          <small>REFERRAL INCOME</small>
+          <strong class="blue">₹ 0.00</strong>
+        </div>
+
+        <div class="stat">
+          <small>TODAY ROI INCOME</small>
+          <strong class="green">₹ 0.00</strong>
+        </div>
+
+        <div class="stat">
+          <small>TODAY LEVEL INCOME</small>
+          <strong class="blue">₹ 0.00</strong>
+        </div>
+
+        <div class="stat">
+          <small>TOTAL ROI INCOME</small>
+          <strong class="green">₹ 0.00</strong>
+        </div>
+
+        <div class="stat">
+          <small>TOTAL LEVEL INCOME</small>
+          <strong class="blue">₹ 0.00</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FD INCOME -->
+
+    <section class="section">
+
+      <h3>
+        🎁 FD Income Breakdown
+      </h3>
+
+      <div class="grid six">
+
+        <div class="stat">
+          <small>TODAY ROI INCOME</small>
+          <strong class="green">₹ 0.00</strong>
+        </div>
+
+        <div class="stat">
+          <small>TODAY LEVEL INCOME</small>
+          <strong class="blue">₹ 0.00</strong>
+        </div>
+
+        <div class="stat">
+          <small>TOTAL ROI INCOME</small>
+          <strong class="green">₹ 0.00</strong>
+        </div>
+
+        <div class="stat">
+          <small>TOTAL LEVEL INCOME</small>
+          <strong class="blue">₹ 0.00</strong>
+        </div>
+
+        <div class="stat">
+          <small>REFERRAL INCOME</small>
+          <strong class="blue">₹ 0.00</strong>
+        </div>
+
+        <div class="stat">
+          <small>FD WITHDRAWAL</small>
+          <strong class="blue">₹ 0.00</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+      © 2026 India Finance. All Rights Reserved.
+    </footer>
+
+  </main>
+
+
+  <!-- THEME MENU -->
+
+  <div id="themeMenu" class="theme-menu hidden">
+
+    <button data-theme="light">
+      ◉ Light
+    </button>
+
+    <button data-theme="dark">
+      ◉ Dark
+    </button>
+
+    <button data-theme="default">
+      ◉ Default
+    </button>
+
+  </div>
+
+
+  <!-- PROFILE MENU -->
+
+  <div id="profileMenu" class="profile-menu hidden">
+
+    <b id="menuName">
+      User
+    </b>
+
+    <span id="menuUserId">
+      —
+    </span>
+
+    <button id="profileDemo">
+      Profile
+    </button>
+
+    <button id="logout2">
+      Logout
+    </button>
+
+  </div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
